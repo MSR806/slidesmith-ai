@@ -1,0 +1,111 @@
+/* Export mode (CLI PDF) — clean slides, no footer/laser/cursor */
+.deck-shell.is-exporting .deck-footer { display: none; }
+.deck-shell.is-exporting { cursor: none; }
+
+/* Deck picker — dark landing page shared across decks */
+.deck-picker {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: clamp(24px, 6vw, 80px);
+  background:
+    radial-gradient(1100px 720px at 82% -10%, rgba(123, 131, 255, 0.18) 0%, transparent 56%),
+    radial-gradient(1000px 640px at -6% 110%, rgba(76, 84, 180, 0.16) 0%, transparent 60%),
+    #0a0c16;
+  color: #f3f5fc;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.deck-picker-inner {
+  width: 100%;
+  max-width: 880px;
+}
+
+.deck-picker-eyebrow {
+  margin: 0 0 0.6em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8b93ff;
+}
+
+.deck-picker-title {
+  margin: 0 0 clamp(24px, 4vw, 44px);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #f3f5fc;
+}
+
+.deck-picker-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(12px, 1.6vw, 18px);
+}
+
+.deck-picker-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 28px);
+  text-align: left;
+  cursor: pointer;
+  background: #161a2b;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  padding: clamp(18px, 2.4vw, 28px) clamp(20px, 2.8vw, 34px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 22px 48px -24px rgba(0, 0, 0, 0.7);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  font-family: inherit;
+  color: inherit;
+}
+
+.deck-picker-card:hover,
+.deck-picker-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(123, 131, 255, 0.45);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 26px 52px -22px rgba(123, 131, 255, 0.4);
+  outline: none;
+}
+
+.deck-picker-index {
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: 800;
+  color: #4b5170;
+  font-variant-numeric: tabular-nums;
+}
+
+.deck-picker-body {
+  flex: 1;
+  display: grid;
+  gap: 0.3em;
+}
+
+.deck-picker-card-title {
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: #f3f5fc;
+}
+
+.deck-picker-card-blurb {
+  font-size: clamp(0.92rem, 1.4vw, 1.1rem);
+  color: #8b91ac;
+  line-height: 1.4;
+}
+
+.deck-picker-meta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7191;
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .deck-picker-meta { display: none; }
+}

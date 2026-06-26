@@ -1,0 +1,71 @@
+/*
+ * Theme for the template deck. Everything is scoped under the deck's themeClass
+ * (`.theme-template`) so it never leaks into other decks. When you copy this
+ * folder, rename the class to match your deck's `themeClass` and restyle freely.
+ *
+ * The player applies `themeClass` to `.deck-shell`, so scope your rules as:
+ *   .theme-template .tpl-slide { ... }
+ */
+
+.theme-template {
+  --tpl-bg: #0b0e14;
+  --tpl-fg: #e6e9ef;
+  --tpl-muted: #97a0b0;
+  --tpl-accent: #6ea8fe;
+  background: var(--tpl-bg);
+  color: var(--tpl-fg);
+}
+
+.theme-template .tpl-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 6vh 8vw;
+  box-sizing: border-box;
+}
+
+.theme-template .tpl-slide--hero {
+  align-items: flex-start;
+}
+
+.theme-template .tpl-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.9rem;
+  color: var(--tpl-accent);
+  margin: 0;
+}
+
+.theme-template .tpl-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.theme-template .tpl-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 1rem;
+}
+
+.theme-template .tpl-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  color: var(--tpl-muted);
+  margin: 0;
+  max-width: 60ch;
+}
+
+.theme-template .tpl-list {
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  line-height: 1.8;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.theme-template .tpl-list li::before {
+  content: '→ ';
+  color: var(--tpl-accent);
+}

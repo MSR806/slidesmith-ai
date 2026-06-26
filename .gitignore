@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# generated PDFs / screenshots
+exports/
+
+# OS / editor cruft
+.DS_Store
+*.log
+
+# Claude Code local settings (keep project settings.json, ignore personal overrides)
+.claude/settings.local.json
+
+# Private / unpublished decks — keep these locally, never publish.
+# Each entry is a deck folder under src/decks/. The registry auto-discovers
+# whatever folders exist, so ignored decks load locally and vanish on a clone.
+src/decks/ai-agents-platform/
+
+# Private talk scripts / source outlines that are not for publication.
+ai-agents-platform-talk.md
